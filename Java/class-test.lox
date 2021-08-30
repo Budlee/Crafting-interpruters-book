@@ -1,0 +1,64 @@
+class DevonshireCream {
+	serveOn(){
+		return "scones";
+	}
+}
+
+print DevonshireCream;
+
+class Bagel {}
+var bagel = Bagel();
+
+print bagel;
+
+class Bacon{
+	eat(){
+		print "Crunch Crunch Crunch";
+	}
+}
+
+Bacon().eat();
+
+class Cake {
+	taste() {
+		var adjective = "delicious";
+		print "The " + this.flavour + " cake is " + adjective + "!";
+	}
+}
+var cake = Cake();
+cake.flavour = "German choclate";
+cake.taste();
+
+// print this; //throws RuntimeError3
+
+class Foo{
+	init(){
+		print "Called init()";
+		return;
+	}
+}
+
+fun madInit(){
+	print "madInit";
+}
+var f= Foo();
+f.init();
+f.init = madInit;
+f.init();
+Foo();
+
+class Doughnut{
+	cook(){
+		print "Fry untill golden brown.";
+	}
+}
+class BostonCream < Doughnut {
+	cook(){
+		super.cook();
+		print "Pipe full of custard and coat with choclate.";
+	}
+
+}
+
+BostonCream().cook();
+
